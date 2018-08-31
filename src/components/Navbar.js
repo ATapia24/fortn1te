@@ -11,7 +11,6 @@ import Signup from "./Signup";
 import { connect } from "react-redux";
 import { logout } from "../actions/user";
 import Button from "@material-ui/core/Button";
-import WhosLoggedIn from "./WhosLoggedIn";
 const styles = {
   root: {
     flexGrow: 1
