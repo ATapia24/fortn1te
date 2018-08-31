@@ -15,4 +15,6 @@ How to deploy a local instance of this front-end:
 [React.js](https://reactjs.org/) – A JavaScript library for building user interfaces  
 [Redux](https://redux.js.org/) – Redux is a predictable state container for JavaScript apps.  
 [Material-UI](https://material-ui.com/) – React components that implement Google's Material Design. (CSS framework)  
-[Google Firebase](https://firebase.google.com/) – Back-end to keep track of Users and consistant logins
+[Google Firebase](https://firebase.google.com/) – Back-end to keep track of Users and consistant logins  
+[React Router](https://github.com/ReactTraining/react-router) – Declarative routing for React  
+[Firebase](https://firebase.google.com/) – User Authentication service by Google
