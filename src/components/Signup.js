@@ -108,7 +108,7 @@ class Signup extends React.Component {
               Cancel
             </a>
             <a onClick={this.handleSignup} className="button primary">
-              Login
+              Sign up
             </a>
           </DialogActions>
         </Dialog>

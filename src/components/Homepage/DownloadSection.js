@@ -17,7 +17,7 @@ class DownloadSection extends React.Component {
           <ul class="actions special">
             <li>
               <a href="generic.php" class="button primary">
-                Windows
+                Windows x86 (32 bit)
               </a>
             </li>
           </ul>
