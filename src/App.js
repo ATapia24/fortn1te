@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Navbar from "./components/Navbar";
+import Homepage from "./components/Homepage";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import { fetchInitialUser } from "./actions/user";
@@ -14,7 +14,7 @@ class App extends Component {
       <BrowserRouter>
         <React.Fragment>
           <Switch>
-            <Route exact path="/" component={Navbar} />
+            <Route exact path="/" component={Homepage} />
           </Switch>
         </React.Fragment>
       </BrowserRouter>

@@ -41,10 +41,10 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div>
-        <Button color="inherit" onClick={this.handleClickOpen}>
-          Login
-        </Button>
+      <React.Fragment>
+        <li onClick={this.handleClickOpen}>
+          <a>Login</a>
+        </li>
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}
@@ -76,15 +76,15 @@ class Login extends React.Component {
             />
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.handleClose} color="primary">
+            <a onClick={this.handleClose} className="button primary">
               Cancel
-            </Button>
-            <Button onClick={this.handleLoginSubmit} color="primary">
+            </a>
+            <a onClick={this.handleLoginSubmit} className="button primary">
               Login
-            </Button>
+            </a>
           </DialogActions>
         </Dialog>
-      </div>
+      </React.Fragment>
     );
   }
 }

@@ -51,10 +51,10 @@ class Signup extends React.Component {
   render() {
     console.log(this.state);
     return (
-      <div>
-        <Button color="inherit" onClick={this.handleClickOpen}>
-          Signup
-        </Button>
+      <React.Fragment>
+        <li onClick={this.handleClickOpen}>
+          <a>Signup</a>
+        </li>
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}
@@ -104,15 +104,15 @@ class Signup extends React.Component {
             />
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.handleClose} color="primary">
+            <a onClick={this.handleClose} className="button primary">
               Cancel
-            </Button>
-            <Button onClick={this.handleSignup} color="primary">
-              Signup
-            </Button>
+            </a>
+            <a onClick={this.handleSignup} className="button primary">
+              Login
+            </a>
           </DialogActions>
         </Dialog>
-      </div>
+      </React.Fragment>
     );
   }
 }
