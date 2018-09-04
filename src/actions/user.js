@@ -18,7 +18,7 @@ export const fetchInitialUser = () => dispatch => {
   fire.auth().onAuthStateChanged(function(user) {
     if (user) {
       axios
-        .post("http://localhost:3001/signin", {
+        .post("http://localhost:50002/signin", {
           uid: user.uid
         })
         .then(userData => {
@@ -55,7 +55,7 @@ export const handleSignup = (
       //after creating user, we access that user immediately by the currentUser
       const user = fire.auth().currentUser;
       if (user) {
-        axios.post("http://localhost:3001/signup", {
+        axios.post("http://localhost:50002/signup", {
           uid: user.uid,
           fortniteUsername: fortniteUsername,
           displayName: username
