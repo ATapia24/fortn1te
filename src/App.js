@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
-import { fetchUser } from "./actions/user";
+import { fetchInitialUser } from "./actions/user";
 
 class App extends Component {
   componentDidMount() {
-    this.props.fetchUser();
+    this.props.fetchInitialUser();
   }
 
   render() {
@@ -24,5 +24,5 @@ class App extends Component {
 
 export default connect(
   null,
-  { fetchUser }
+  { fetchInitialUser }
 )(App);

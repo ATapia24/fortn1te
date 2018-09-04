@@ -6,13 +6,15 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import fire from "../config/firebase";
-
+import { connect } from "react-redux";
+import { handleSignup } from "../actions/user";
 class Signup extends React.Component {
   state = {
     open: false,
     email: "",
     password: "",
+    username: "",
+    fortniteUsername: "",
     errorMessage: null
   };
 
@@ -32,15 +34,18 @@ class Signup extends React.Component {
     this.setState({ password: e.target.value });
   };
 
+  onUsernameChange = e => {
+    this.setState({ username: e.target.value });
+  };
+
+  onFortniteUsernameChange = e => {
+    this.setState({ fortniteUsername: e.target.value });
+  };
+
   handleSignup = e => {
     e.preventDefault();
-    const { email, password } = this.state;
-    fire
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .catch(error => {
-        this.setState({ errorMessage: error.message });
-      });
+    const { email, password, username, fortniteUsername } = this.state;
+    this.props.handleSignup(email, password, username, fortniteUsername);
   };
 
   render() {
@@ -61,6 +66,24 @@ class Signup extends React.Component {
               Use your username and password to signup. We will never share
               these details with anybody.
             </DialogContentText>
+            <TextField
+              margin="normal"
+              id="username"
+              label="Username"
+              type="username"
+              fullWidth
+              value={this.state.username}
+              onChange={this.onUsernameChange}
+            />
+            <TextField
+              margin="normal"
+              id="fortniteUsername"
+              label="Fortnite Username"
+              type="username"
+              fullWidth
+              value={this.state.fortniteUsername}
+              onChange={this.onFortniteUsernameChange}
+            />
             <TextField
               margin="normal"
               id="email"
@@ -94,4 +117,7 @@ class Signup extends React.Component {
   }
 }
 
-export default Signup;
+export default connect(
+  null,
+  { handleSignup }
+)(Signup);

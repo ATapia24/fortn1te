@@ -6,7 +6,8 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import fire from "../config/firebase";
+import { connect } from "react-redux";
+import { handleLogin } from "../actions/user";
 
 class Login extends React.Component {
   state = {
@@ -32,22 +33,13 @@ class Login extends React.Component {
     this.setState({ password: e.target.value });
   };
 
-  handleLogin = e => {
+  handleLoginSubmit = e => {
     e.preventDefault();
     const { email, password } = this.state;
-    fire
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .then(() => {
-        this.setState({ open: false });
-      })
-      .catch(error => {
-        this.setState({ errorMessage: error.message });
-      });
+    this.props.handleLogin(email, password);
   };
 
   render() {
-    console.log(this.state);
     return (
       <div>
         <Button color="inherit" onClick={this.handleClickOpen}>
@@ -87,7 +79,7 @@ class Login extends React.Component {
             <Button onClick={this.handleClose} color="primary">
               Cancel
             </Button>
-            <Button onClick={this.handleLogin} color="primary">
+            <Button onClick={this.handleLoginSubmit} color="primary">
               Login
             </Button>
           </DialogActions>
@@ -97,4 +89,7 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default connect(
+  null,
+  { handleLogin }
+)(Login);

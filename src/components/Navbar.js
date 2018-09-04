@@ -30,7 +30,7 @@ class Navbar extends React.Component {
     if (this.props.user) {
       return (
         <React.Fragment>
-          <div>{this.props.user.uid}</div>
+          <div>{this.props.user.displayName}</div>
           <Button color="inherit" onClick={this.props.logout}>
             Logout
           </Button>
