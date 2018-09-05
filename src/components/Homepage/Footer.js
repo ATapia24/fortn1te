@@ -26,7 +26,7 @@ class Footer extends React.Component {
             <dd>Los Angeles, California</dd>
             <dt>Email</dt>
             <dd>
-              <a href="#">business@fortn1te.com</a>
+              <p>business@fortn1te.com</p>
             </dd>
           </dl>
           <ul class="icons">

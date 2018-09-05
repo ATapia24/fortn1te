@@ -1,5 +1,7 @@
 import React from "react";
+// eslint-disable-next-line
 import { connect } from "react-redux";
+// eslint-disable-next-line
 import { logout } from "../../actions/user";
 
 class Header extends React.Component {
