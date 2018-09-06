@@ -4,7 +4,6 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import App from "./App";
 import rootReducer from "./reducers";
-import "./main.css";
 
 //Middlewares
 import { createLogger } from "redux-logger";

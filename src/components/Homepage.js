@@ -3,15 +3,18 @@ import Header from "./Homepage/Header";
 import Navbar from "./Homepage/Navbar";
 import Sections from "./Homepage/Sections";
 import Footer from "./Homepage/Footer";
+import styles from "../styles.css";
 
 class Homepage extends React.Component {
   render() {
     return (
-      <div id="wrapper">
+      <div>
         <Header />
         <Navbar />
-        <Sections />
-        <Footer />
+        <div className={styles.wrapper}>
+          <Sections />
+          <Footer />
+        </div>
       </div>
     );
   }
