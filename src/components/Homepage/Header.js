@@ -1,14 +1,11 @@
 import React from "react";
-// eslint-disable-next-line
-import { connect } from "react-redux";
-// eslint-disable-next-line
-import { logout } from "../../actions/user";
+import styles from "../../styles.css";
 
 class Header extends React.Component {
   render() {
     return (
-      <header id="header" class="alt">
-        <span class="fa fa-flask fa-40x" />
+      <header className={`${styles.alt} ${styles.header}`}>
+        <span className="fa fa-flask fa-40x" />
         <h1>Fortn1te</h1>
         <p>
           We analyze your Fortnite replay files and provide you with detailed

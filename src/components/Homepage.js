@@ -8,13 +8,11 @@ import styles from "../styles.css";
 class Homepage extends React.Component {
   render() {
     return (
-      <div>
+      <div className={styles.wrapper}>
         <Header />
         <Navbar />
-        <div className={styles.wrapper}>
-          <Sections />
-          <Footer />
-        </div>
+        <Sections />
+        <Footer />
       </div>
     );
   }

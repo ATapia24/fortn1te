@@ -1,44 +1,48 @@
 import React from "react";
+import styles from "../../styles.css";
 
 class UploadSection extends React.Component {
   render() {
     return (
-      <section id="second" class="main special">
-        <header class="major">
+      <section id="second" className={`${styles.main} ${styles.special}`}>
+        <header className={styles.major}>
           <h2>
             <b>Upload</b>
           </h2>
           <p>Upload private or public Replay Files.</p>
         </header>
-        <ul class="statistics">
-          <li class="style1">
-            <span class="icon fa-users" />
+        <ul className={styles.statistics}>
+          <li className={styles.style1}>
+            {/*class below missing fa-users*/}
+            <span className={styles.icon} />
             <strong>1</strong> Unique Players
           </li>
-          <li class="style2">
-            <span class="icon fa-film" />
+          <li className={styles.style2}>
+            {/*class below missing fa-film*/}
+            <span className={styles.icon} />
             <strong>1</strong> Replay Files
           </li>
-          <li class="style3">
-            <span class="icon fa-gamepad" />
+          <li className={styles.style3}>
+            {/*class below missing fa-gamepad*/}
+            <span className={styles.icon} />
             <strong>1</strong> Matches
           </li>
-          <li class="style4">
-            <span class="icon fa-crosshairs" />
+          <li className={styles.style4}>
+            {/*class below missing fa-crosshairs*/}
+            <span className={styles.icon} />
             <strong>1</strong> Eliminations
           </li>
-          <li class="style5">
-            <span class="icon fa-grav" />
+          <li className={styles.style5}>
+            {/*class below missing fa-grav*/}
+            <span className={styles.icon} />
             <strong>1</strong> Mistakes Made
           </li>
         </ul>
-        <p class="content"> </p>
-        <footer class="major">
-          <ul class="actions special">
+        <p className={styles.content}> </p>
+        <footer className={styles.major}>
+          <ul className={`${styles.actions} ${styles.special}`}>
             <li>
-              <a href="generic.php" class="button">
-                Start Uploading
-              </a>
+              <button className={styles.button}>Start Uploading</button>
             </li>
           </ul>
         </footer>

@@ -1,8 +1,9 @@
 import React from "react";
-import Login from "../Login";
-import Signup from "../Signup";
+import Login from "./Login";
+import Signup from "./Signup";
 import { connect } from "react-redux";
 import { logout } from "../../actions/user";
+import styles from "../../styles.css";
 
 class Navbar extends React.Component {
   renderNavbarOptions = () => {
@@ -28,10 +29,10 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <nav id="nav">
+      <nav className={styles.nav}>
         <ul>
           <li>
-            <a href="#intro" class="active">
+            <a href="#intro" className={styles.active}>
               About
             </a>
           </li>

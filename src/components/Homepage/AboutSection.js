@@ -1,12 +1,13 @@
 import React from "react";
+import styles from "../../styles.css";
 
 class AboutSection extends React.Component {
   render() {
     return (
-      <section id="intro" class="main">
-        <div class="spotlight">
-          <div class="content">
-            <header class="major">
+      <section className={`${styles.main} ${styles.intro}`}>
+        <div className={styles.spotlight}>
+          <div className={styles.content}>
+            <header className={styles.major}>
               <h2>About</h2>
             </header>
             <p>
@@ -14,15 +15,14 @@ class AboutSection extends React.Component {
               detailed statistics
               <br /> about you and your opponents to improve your game!
             </p>
-            <ul class="actions">
+            <ul className={styles.actions}>
               <li>
-                <a href="generic.php" class="button">
-                  Learn More
-                </a>
+                <button className={styles.button}>Learn More</button>
               </li>
             </ul>
           </div>
-          <span class="icon major fa-graduation-cap" />
+          {/*Class also had fa-graduation-cap below*/}
+          <span className={`${styles.icon} ${styles.major}`} />
         </div>
       </section>
     );

@@ -1,9 +1,10 @@
 import React from "react";
+import styles from "../../styles.css";
 
 class Footer extends React.Component {
   render() {
     return (
-      <footer id="footer">
+      <footer className={styles.footer}>
         <section>
           <h2>Development</h2>
           <p>
@@ -11,17 +12,15 @@ class Footer extends React.Component {
             sure to reach out to us with any request you would like to see or
             any bugs you encounter, thank you.
           </p>
-          <ul class="actions">
+          <ul className={styles.actions}>
             <li>
-              <a href="generic.php" class="button">
-                Learn More
-              </a>
+              <button className={styles.button}>Learn More</button>
             </li>
           </ul>
         </section>
         <section>
           <h2>Contact</h2>
-          <dl class="alt">
+          <dl className={styles.alt}>
             <dt>Location</dt>
             <dd>Los Angeles, California</dd>
             <dt>Email</dt>
@@ -29,13 +28,13 @@ class Footer extends React.Component {
               <p>business@fortn1te.com</p>
             </dd>
           </dl>
-          <ul class="icons">
+          <ul className={styles.icons}>
             <li>
               <a
                 href="https://twitter.com/Fortn1teDotCom"
                 class="icon fa-twitter alt"
               >
-                <span class="label">Twitter</span>
+                <span className={styles.label}>Twitter</span>
               </a>
             </li>
             <li>
@@ -43,7 +42,7 @@ class Footer extends React.Component {
                 href="https://www.instagram.com/fortn1tedotcom"
                 class="icon fa-instagram alt"
               >
-                <span class="label">Instagram</span>
+                <span className={styles.label}>Instagram</span>
               </a>
             </li>
             <li>
@@ -51,12 +50,12 @@ class Footer extends React.Component {
                 href="https://www.youtube.com/channel/UC2MzeLwZ0aZ2UR3Gmsmo98A"
                 class="icon fa-youtube alt"
               >
-                <span class="label">Youtube</span>
+                <span className={styles.label}>Youtube</span>
               </a>
             </li>
           </ul>
         </section>
-        <p class="copyright">&copy; Fortn1te.com</p>
+        <p className={styles.copyright}>&copy; Fortn1te.com</p>
       </footer>
     );
   }
